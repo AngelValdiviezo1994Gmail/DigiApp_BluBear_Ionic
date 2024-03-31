@@ -27,7 +27,7 @@
   <ion-grid>
     <ion-row *ngFor="let item of data">
       <ion-col size="6">
-        <ion-card>
+        <ion-card (click)="openModal(item)">
           <ion-card-header>
             <ion-card-title>{{ item.name }}</ion-card-title>
           </ion-card-header>

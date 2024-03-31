@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, ModalController } from '@ionic/angular';
+import { NavController, ModalController, AlertController } from '@ionic/angular';
 import { InicioPage } from '../inicio/inicio.page';
 
 import { Router } from '@angular/router';
@@ -17,16 +17,35 @@ export class LoginPage {
   constructor(
     private navController: NavController,
     private modalCtrl: ModalController,
-    private router: Router
+    private router: Router,
+    public alertController: AlertController
   ) {
   }
 
   async login() {
-    this.router.navigateByUrl('/inicio');
+    if(this.email != null && this.email != '' &&
+    this.password != null && this.password != '') {
+      this.router.navigateByUrl('/inicio');
+    } else {
+      this.presentAlert('Ingrese información');
+    }
+    
   }
 
   async registrarse() {
     this.router.navigateByUrl('/usuario');
+  }
+
+  
+  async presentAlert(mensaje: string) {
+    const alert = await this.alertController.create({
+      header: 'Atención',
+      //subHeader: 'Este es un subtítulo',
+      message: mensaje,
+      buttons: ['OK']
+    });
+  
+    await alert.present();
   }
 
 }

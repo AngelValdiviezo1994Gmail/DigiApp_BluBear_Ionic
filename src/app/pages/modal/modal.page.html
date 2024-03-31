@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Información</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-col size="5">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ data.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        
+        <ion-img src="{{ data.images[0].href }}"></ion-img>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-content>
