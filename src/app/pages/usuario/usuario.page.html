@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registro de usuario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <!-- Formulario para añadir un elemento -->
+  <ion-item>
+    <ion-input label="Nombre: " [(ngModel)]="nombres" name="language"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Correo: " [(ngModel)]="correo" name="language"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Contraseña: " [(ngModel)]="contrasenia" name="language" type="password"></ion-input>    
+  </ion-item>
+
+  <ion-button (click)="create()">
+    <ion-icon name="add-outline"></ion-icon>
+    Grabar
+  </ion-button>
+
+
+
+</ion-content>
