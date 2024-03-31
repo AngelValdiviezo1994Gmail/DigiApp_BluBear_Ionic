@@ -19,4 +19,44 @@
       </ion-card-content>
     </ion-card>
   </ion-col>
+  <ion-col size="2">
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Level</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- <ion-card-title>{{ data.levels[0].level }}</ion-card-title> -->
+        {{data.levels[0].level}}
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Atributo</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- <ion-card-title>{{ data.attributes[0].attribute }}</ion-card-title> -->
+        {{data.attributes[0].attribute}}
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Type</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- <ion-card-title>{{ data.attributes[0].attribute }}</ion-card-title> -->
+        {{data.types[0].type}}
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+  <ion-col size="5">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Fields</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img src="{{ data.fields[0].image }}"></ion-img>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
 </ion-content>

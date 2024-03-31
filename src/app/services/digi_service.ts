@@ -40,8 +40,6 @@ const apiUrl = environment.apiUrl;
 
 export class DigiServicesService {
 
-  //private apiUrl = 'https://digi-api.com/api/v1/digimon?pageSize=20';
-
   constructor(private http: HttpClient) { }
 
   

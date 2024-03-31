@@ -8,6 +8,7 @@ export interface DigimonDetalleModel {
     types: Type[]; 
     attributes: Attribute[];
     releaseDate: string;
+    fields: Field[];
 }
 
 
@@ -29,4 +30,10 @@ export interface Type {
 export interface Attribute {
     id:    number;
     attribute:  string;
+}
+
+export interface Field {
+    id:    number;
+    field:  string;
+    image:  string;
 }
